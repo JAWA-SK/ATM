@@ -185,13 +185,13 @@ public class vechicle {
         System.out.println("ENTER THE VECHICLE NUMBER");
         String j =sc.next();
         System.out.println();
-        System.out.println("ENTER THE VECHCILETYPE");
+        System.out.println("ENTER THE VECHCILE TYPE");
         System.out.println();
         System.out.println("1.CAR");
         System.out.println("2.BIKE");
         int j1=sc.nextInt();
         System.out.println();
-        System.out.println("ENTER THE VECHICLE QUANTITY");
+        System.out.println("ENTER THE VECHICLE COUNT");
         String j2=sc.next();
         System.out.println();
         System.out.println("ENTER THE VECHICLE PRICE");
@@ -276,7 +276,7 @@ public static void edit()
     System.out.println("\t\tWELCOME ADMIN");
     System.out.println();
     for(int i=0;i<l8.size();i++){
-        System.out.println("BOOK ID IS : "+l8.get(i)+"||"+" BOOK NAME IS : "+l2.get(i)+"||"+"BOOK QUANTITY : "+l4.get(i)+"||"+"BOOK TYPE : "+l3.get(i)+"||"+"BOOK PRICE : "+l11.get(i));
+        System.out.println("VECHCILE ID IS : "+l8.get(i)+"||"+"VECHCILE NUMBER IS : "+l2.get(i)+"||"+"VECHCILE COUNT : "+l4.get(i)+"||"+"VECHCILE TYPE : "+l3.get(i)+"||"+"VECHCILE  PRICE : "+l11.get(i));
     }
     System.out.println();
     System.out.println("1.CHANGE THE VECHICLE NUMBER");
@@ -439,10 +439,6 @@ public static void edit1()
         {
             returnbook();
         }
-       /* else if(y1==6)
-        {
-            lost();
-        }*/
         else
         {
             user();
@@ -487,14 +483,14 @@ public static void edit1()
            }
     public static void remove()
            {
-             System.out.println("ENTER THE BOOK ID");
+             System.out.println("ENTER THE VECHCILE ID");
             int y2=sc.nextInt();
             int y3=l8.indexOf(y2);
             b.remove(l2.get(y3));
             poo++;
             l4.set(y3,Integer.toString(poo));
             System.out.println();
-            System.out.println("BOOK REMOVED SUCCESSFULLY");
+            System.out.println("VECHCILE REMOVED SUCCESSFULLY");
             System.out.println();
             System.out.println("====PRESS ENTER TO CONTINUE====");
             sc.nextLine();
@@ -588,41 +584,6 @@ public static void returnbook()
            user1();
 
 }
-/*public static void lost()
-{
-    System.out.print("\033[H\033[2J");
-    System.out.flush();
-    if(b.size()>0)
-    {
-    System.out.println("ENTER THE BOOK ID ");
-    int ssss=sc.nextInt();
-    int lol=l8.indexOf(ssss);
-    System.out.println("REASON");
-    String pp=sc.next();
-    System.out.println("YOUR BALANCE WILL BE REDUCED IN DEPOSIT");
-    int price=Integer.parseInt(l11.get(lol));
-    int sum=(price*80)/100;
-    int sub=Integer.parseInt(l9.get(lol));
-    int returnme=sub-sum;
-    l9.set(lol,Integer.toString(returnme));
-    l2.remove(lol);
-    l3.remove(lol);
-    b.remove(lol);
-    l10.remove(lol);
-    l12.remove(lol);
-    }
-    else
-    {
-        System.out.println("NO BOOK TO LOSE");
-    }
-
-
-    System.out.println("====PRESS ENTER TO CONTINUE====");
-    sc.nextLine();
-    String s=sc.nextLine();
-    if(s.equals(""))
-    user1();
-}*/
 public static void soldout()
 {
     if(b.size()>0){
@@ -630,9 +591,9 @@ public static void soldout()
     for(int i=0;i<l2.size();i++)
     {
         System.out.println("---------------------------------------------------------");
-        System.out.println("BOOK ID : "+l8.get(i));
-        System.out.println("BOOK NAME : "+l2.get(i));
-        System.out.println("BOOK PRICE: "+l11.get(i));
+        System.out.println("VECHCILE  ID : "+l8.get(i));
+        System.out.println("VECHCILE  NAME : "+l2.get(i));
+        System.out.println("VECHCILE PRICE: "+l11.get(i));
         System.out.println("BORROWED ON : "+l10.get(i));
     }
 }
