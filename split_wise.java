@@ -178,7 +178,7 @@ public static void check()
             System.out.println();
         }
         System.out.println("YOUR BALANCE IS "+balance);
-        if(balance>=(bb/3)*3)
+        if(balance>=(bb/3)*2)
         {
             l7.addAll(l6);
             l6.clear();
